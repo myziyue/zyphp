@@ -16,4 +16,3 @@ phpunit.phar
 /phpunit.xml
 
 # 项目文件
-vendor
