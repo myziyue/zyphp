@@ -17,3 +17,4 @@ phpunit.phar
 
 # 项目文件
 vendor
+composer.lock
