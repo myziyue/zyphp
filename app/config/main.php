@@ -15,5 +15,6 @@ return [
     'components' => [
         require __DIR__ . DIRECTORY_SEPARATOR . 'db.php',
         require __DIR__ . DIRECTORY_SEPARATOR . 'cache.php',
+        'logger' => ['class' => 'zy\log\driver\FileLogger'],
     ],
 ];

@@ -1,5 +1,5 @@
 {
     "require": {
-        "myziyue/zyphp": "dev-master"
+        "myziyue/framework": "dev-framework-v0.2"
     }
 }

@@ -17,14 +17,13 @@ ini_set('display_errors', true);
 ini_set('error_reporting', -1);
 defined("WEBROOT") or define("WEBROOT", __DIR__);
 //include_once WEBROOT . '/../vendor/autoload.php';
-include_once WEBROOT . '/../vendor/myziyue/zyphp/Zy.php';
+include_once WEBROOT . '/../vendor/myziyue/framework/Zy.php';
 
 $config = require WEBROOT . '/../app/config/main.php';
 
 try{
     (new \zy\web\Application($config))->run();
-    Zy::p("logger component version : " . Zy::$app->logger->version());
     Zy::p(Zy::$app->name . ' ' . Zy::$app->version);
 } catch (Exception $ex){
-    Zy::p($e);
+    Zy::p($ex);
 }
