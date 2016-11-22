@@ -6,8 +6,6 @@
  * @created 2016/11/21  下午5:28
  * @since 1.0
  */
-return [
-    'db' => [
-        'class' => 'zy/db/Connention',
-    ],
+return  [
+    'class' => 'zy\db\Connention',
 ];

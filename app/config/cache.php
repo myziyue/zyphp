@@ -6,3 +6,6 @@
  * @created 2016/11/21  下午5:28
  * @since 1.0
  */
+return [
+    'class' => 'zy\cache\FileCache',
+];
