@@ -25,4 +25,9 @@ class ZiyueController
         Zy::p(Zy::powered());
     }
 
+    public function actionOffline(){
+        Zy::p('Website is offline!');
+        Zy::p(Zy::powered());
+    }
+
 }

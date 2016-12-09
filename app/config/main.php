@@ -15,9 +15,14 @@ return [
     'charset' => 'UTF-8',
     'bootstrap' => ['logger'],
     'components' => [
-        'logger' => ['class' => 'zy\log\Logger'],
-        'errorHandler' => ['class' => 'zy\web\ErrorHandler'],
+        'logger' => [
+            'class' => 'zy\log\Logger'
+        ],
+        'errorHandler' => [
+            'class' => 'zy\web\ErrorHandler'
+        ],
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
         'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
-    ]
+    ],
+    'catchAll' => require (__DIR__ . DIRECTORY_SEPARATOR . 'offline.php'),
 ];
