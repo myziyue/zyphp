@@ -13,19 +13,12 @@
  * 2、 加载类库
  * 3、 启动框架
  */
-ini_set('display_errors', false);
+ini_set('display_errors', true);
 ini_set('error_reporting', -1);
 defined("WEBROOT") or define("WEBROOT", __DIR__);
-//define('ZY_DEBUG', true);
+define('ZY_DEBUG', true);
 //include_once WEBROOT . '/../vendor/autoload.php';
 include_once WEBROOT . '/../vendor/myziyue/framework/Zy.php';
 
 $config = require WEBROOT . '/../app/config/main.php';
-
-
-//try{
-    (new \zy\web\Application($config))->run();
-    Zy::p(Zy::$app->name . ' ' . Zy::$app->version);
-//} catch (Exception $ex){
-//    Zy::p($ex);
-//}
+ (new \zy\web\Application($config))->run();

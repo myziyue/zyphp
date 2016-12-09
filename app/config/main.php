@@ -11,6 +11,7 @@ return [
     'name' => 'My Application',
     'version' => '1.0',
     'appPath' => dirname(__DIR__),
+    'controllerNamespace' => 'app\\controller',
     'charset' => 'UTF-8',
     'bootstrap' => ['logger'],
     'components' => [
