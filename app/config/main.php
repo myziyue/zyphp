@@ -19,7 +19,8 @@ return [
             'class' => 'zy\log\Logger'
         ],
         'errorHandler' => [
-            'class' => 'zy\web\ErrorHandler'
+            'class' => 'zy\web\ErrorHandler',
+            'errorAction' => 'ziyue/error',
         ],
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
         'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),

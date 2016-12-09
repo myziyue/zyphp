@@ -7,14 +7,16 @@
  * @created 2016/12/9  下午4:14
  * @since 1.0
  */
-namespace  app\controller;
+namespace app\controller;
 
 use Zy;
+use zy\base\Exception;
 
 class ZiyueController
 {
     public function actionIndex()
     {
+        Zy::$app->db->run();
         Zy::p('Hello,world!');
         Zy::p(Zy::powered());
     }
@@ -25,9 +27,16 @@ class ZiyueController
         Zy::p(Zy::powered());
     }
 
-    public function actionOffline(){
+    public function actionOffline()
+    {
         Zy::p('Website is offline!');
         Zy::p(Zy::powered());
+    }
+
+    public function actionError()
+    {
+        $exception = Zy::$app->getErrorHandler()->exceptionMsg;
+        Zy::p($exception->getMessage());
     }
 
 }

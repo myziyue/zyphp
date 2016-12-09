@@ -16,7 +16,7 @@
 ini_set('display_errors', true);
 ini_set('error_reporting', -1);
 defined("WEBROOT") or define("WEBROOT", __DIR__);
-define('ZY_DEBUG', true);
+define('ZY_DEBUG', false);
 //include_once WEBROOT . '/../vendor/autoload.php';
 include_once WEBROOT . '/../vendor/myziyue/framework/Zy.php';
 
