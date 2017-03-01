@@ -11,19 +11,18 @@ return [
     'name' => 'My Application',
     'version' => '1.0',
     'appPath' => dirname(__DIR__),
-    'controllerNamespace' => 'app\\controller',
+    'defaultNameSpace' => 'app\\controller',
     'charset' => 'UTF-8',
-    'bootstrap' => ['logger'],
     'components' => [
-        'logger' => [
-            'class' => 'zy\log\Logger'
-        ],
-        'errorHandler' => [
-            'class' => 'zy\web\ErrorHandler',
-            'errorAction' => 'ziyue/error',
-        ],
+//        'logger' => [
+//            'class' => 'ziyue\log\Logger'
+//        ],
+//        'errorHandler' => [
+//            'class' => 'ziyue\web\ErrorHandler',
+//            'errorAction' => 'ziyue/error',
+//        ],
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
-        'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
+//        'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
     ],
     'catchAll' => require (__DIR__ . DIRECTORY_SEPARATOR . 'offline.php'),
 ];
