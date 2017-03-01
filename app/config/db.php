@@ -7,5 +7,5 @@
  * @since 1.0
  */
 return  [
-    'class' => 'zy\db\Connention',
+    'class' => 'ziyue\db\Connection',
 ];

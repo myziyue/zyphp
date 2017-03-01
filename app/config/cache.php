@@ -7,5 +7,5 @@
  * @since 1.0
  */
 return [
-    'class' => 'zy\cache\FileCache',
+    'class' => 'ziyue\cache\FileCache',
 ];
