@@ -7,5 +7,5 @@
  * @since 1.0
  */
 return [
-    //'url' => 'ziyue/offline'
+    'class' => 'ziyue/offline'
 ];
