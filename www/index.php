@@ -18,7 +18,7 @@ ini_set('error_reporting', -1);
 defined("WEBROOT") or define("WEBROOT", __DIR__);
 define('ZY_DEBUG', true);
 //include_once WEBROOT . '/../vendor/autoload.php';
-include_once WEBROOT . '/../vendor/myziyue/framework/Ziyue.php';
+include_once WEBROOT . '/../vendor/myziyue/framework/Zy.php';
 
 $config = require WEBROOT . '/../app/config/main.php';
  (new \ziyue\web\Application($config))->run();
