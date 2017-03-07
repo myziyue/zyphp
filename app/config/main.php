@@ -11,7 +11,7 @@ return [
     'name' => 'My Application',
     'version' => '1.0',
     'appPath' => dirname(__DIR__),
-    'defaultNameSpace' => 'app\\controller',
+    'defaultNameSpace' => 'app\\controllers',
     'charset' => 'UTF-8',
     'components' => [
 //        'logger' => [
@@ -24,5 +24,5 @@ return [
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
 //        'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
     ],
-    'catchAll' => require (__DIR__ . DIRECTORY_SEPARATOR . 'offline.php'),
+//    'catchAll' => require (__DIR__ . DIRECTORY_SEPARATOR . 'offline.php'),
 ];

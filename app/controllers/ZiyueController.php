@@ -7,16 +7,16 @@
  * @created 2016/12/9  下午4:14
  * @since 1.0
  */
-namespace app\controller;
+namespace app\controllers;
 
 use Zy;
-use zy\base\Exception;
+use ziyue\core\Exception;
 
 class ZiyueController
 {
     public function actionIndex()
     {
-        Zy::$app->db->run();
+//        Zy::$app->db->run();
         Zy::p('Hello,world!');
         Zy::p(Zy::powered());
     }
