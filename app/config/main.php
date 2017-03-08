@@ -17,12 +17,9 @@ return [
 //        'logger' => [
 //            'class' => 'ziyue\log\Logger'
 //        ],
-//        'errorHandler' => [
-//            'class' => 'ziyue\web\ErrorHandler',
-//            'errorAction' => 'ziyue/error',
-//        ],
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
 //        'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
     ],
-//    'catchAll' => require (__DIR__ . DIRECTORY_SEPARATOR . 'offline.php'),
+//    'catchAll' => ['class' => 'index/offline'],
+//    'catchAllAllowIp' => ['192.168.30.1', '127.0.0.1'],
 ];

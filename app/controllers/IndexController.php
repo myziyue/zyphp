@@ -12,13 +12,13 @@ namespace app\controllers;
 use Zy;
 use ziyue\core\Exception;
 
-class ZiyueController
+class IndexController
 {
     public function actionIndex()
     {
 //        Zy::$app->db->run();
         Zy::p('Hello,world!');
-        Zy::p(Zy::powered());
+//        Zy::p(Zy::powered());
     }
 
     public function actionTestAppName()
