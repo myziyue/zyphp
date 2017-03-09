@@ -10,15 +10,14 @@
 namespace app\controllers;
 
 use Zy;
-use ziyue\core\Exception;
+use app\models\ModelFactory;
 
 class IndexController
 {
     public function actionIndex()
     {
-        \Zy::$app->db->getMasterDb()->select();
+        ModelFactory::get('users', 'user')->findUserInfo();
         Zy::p('Hello,world!');
-//        Zy::p(Zy::powered());
     }
 
     public function actionTestAppName()
