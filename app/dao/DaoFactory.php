@@ -21,7 +21,7 @@ class DaoFactory
      * @param $daoModel
      * @param $daoClass
      */
-    public static function get($daoModel, $daoClass){
+    public static function createDao($daoModel, $daoClass){
         $daoFullClass = self::$nameSpace . "\\" . strtolower($daoModel) . "\\" . ucfirst($daoClass) . "Dao";
         if(!isset(self::$daoInstrance[$daoFullClass])){
             if(!class_exists($daoFullClass)){

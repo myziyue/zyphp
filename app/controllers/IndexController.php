@@ -16,7 +16,7 @@ class IndexController
 {
     public function actionIndex()
     {
-        ModelFactory::get('users', 'user')->findUserInfo();
+        ModelFactory::createModel('users', 'user')->findUserInfo();
         Zy::p('Hello,world!');
     }
 
