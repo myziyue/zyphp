@@ -8,4 +8,5 @@
  */
 return  [
     'class' => 'ziyue\db\Connection',
+    'type' => 'mysql',
 ];

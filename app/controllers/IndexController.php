@@ -16,7 +16,7 @@ class IndexController
 {
     public function actionIndex()
     {
-//        Zy::$app->db->run();
+        \Zy::$app->db->getMasterDb()->select();
         Zy::p('Hello,world!');
 //        Zy::p(Zy::powered());
     }
