@@ -9,4 +9,10 @@
 return  [
     'class' => 'ziyue\db\Connection',
     'type' => 'mysql',
+    'master' => [
+
+    ],
+    'slaves' => [
+
+    ]
 ];
