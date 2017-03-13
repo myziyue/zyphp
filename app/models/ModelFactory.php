@@ -21,7 +21,7 @@ class ModelFactory
      * @param $daoModel
      * @param $daoClass
      */
-    public static function get($model, $modelClass){
+    public static function createModel($model, $modelClass){
         $modelFullClass = self::$nameSpace . "\\" . strtolower($model) . "\\" . ucfirst($modelClass) . "Model";
         if(!isset(self::$modelInstrance[$modelFullClass])){
             if(!class_exists($modelFullClass)){

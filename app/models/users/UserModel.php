@@ -15,6 +15,6 @@ use \Zy;
 class UserModel
 {
     public function findUserInfo(){
-        return DaoFactory::get('users', 'user')->findUserInfo(1);
+        return DaoFactory::createDao('users', 'user')->findUserInfo(1);
     }
 }
