@@ -9,10 +9,28 @@
 return  [
     'class' => 'ziyue\db\Connection',
     'type' => 'mysql',
+    'enableSlaves' => true,
     'master' => [
-
+        'host' => 'localhost',
+        'port' => 3306,
+        'user' => 'root',
+        'password' => 'root',
+        'dbName' => 'test'
     ],
     'slaves' => [
-
+        [
+            'host' => 'localhost',
+            'port' => 3306,
+            'user' => 'root',
+            'password' => 'root',
+            'dbName' => 'test'
+        ],
+        [
+            'host' => 'localhost',
+            'port' => 3306,
+            'user' => 'root',
+            'password' => 'root',
+            'dbName' => 'test'
+        ]
     ]
 ];

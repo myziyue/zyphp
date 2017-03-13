@@ -13,6 +13,16 @@ use ziyue\db\Model;
 
 class UserDao extends Model
 {
+
+    public static function tableName()
+    {
+        return '{{%user}}';
+    }
+
+    public function rules()
+    {
+    }
+
     public function findUserInfo($id){
         $sql = "SELECT * FROM zy_user WHERE id=:id";
         $data = self::model()->query($sql, ['id' => $id]);
