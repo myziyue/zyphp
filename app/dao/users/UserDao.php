@@ -24,6 +24,10 @@ class UserDao extends Model
     }
 
     public function findUserInfo($id){
+        $data = self::model()->select('*');
+    }
+
+    public function findUserInfoById($id) {
         $sql = "SELECT * FROM zy_user WHERE id=:id";
         $data = self::model()->query($sql, ['id' => $id]);
         return $data;
