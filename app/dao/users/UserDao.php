@@ -24,7 +24,8 @@ class UserDao extends Model
 
     public function findUserInfo($id){
         $data = static::model()
-            ->from(static::tableName())
+            ->from(static::tableName() . " as a")
+            ->join('{{%user_account}} AS b ON b.uid=a.id')
             ->where([
                 'id' => $id,
                 'username' => 'evan2884'
