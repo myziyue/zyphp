@@ -15,22 +15,45 @@ class UserDao extends Model
 {
     public static function tableName()
     {
-        return '{{%admin}}';
+        return '{{%blogs}}';
     }
 
     public function rules()
     {
+        return [
+            [['cate_id', 'author', 'status', 'created_at', 'updated_at'], 'integer'],
+            [
+                [
+                    'title',
+                    'sketch',
+                    'blog_thumb',
+                    'blog_img',
+                    'original_img',
+                    'content',
+                    'seo_title',
+                    'seo_keywords',
+                    'seo_desc'
+                ],
+                'required'
+            ],
+            [['content'], 'string'],
+            [['title'], 'string', 'max' => 512],
+            [['sketch'], 'string', 'max' => 2000],
+            [['blog_thumb', 'blog_img', 'original_img'], 'string', 'max' => 200],
+            [['seo_title'], 'string', 'max' => 128],
+            [['seo_keywords', 'seo_desc'], 'string', 'max' => 1024],
+        ];
     }
 
     public function findUserInfo($id){
         $data = static::model()
             ->from(static::tableName())
-            ->where([
-                'id' => $id
-            ])
+//            ->where([
+//                'id' => $id
+//            ])
             ->orderBy(['id' => 'desc', 'created_at' => 'asc'])
-            ->groupBy(['id'])
-//            ->limit(0, 20)
+//            ->groupBy(['id'])
+            ->limit(0, 10)
             ->selectAll();
         \Zy::p($data);
     }
