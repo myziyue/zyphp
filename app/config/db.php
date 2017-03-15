@@ -15,7 +15,8 @@ return  [
         'port' => 3306,
         'user' => 'root',
         'password' => 'root',
-        'dbName' => 'test',
+        'charset' => 'utf-8',
+        'dbName' => 'ziyue_db',
         'tblPrefix' => 'zy_',
     ],
     'slaves' => [
@@ -24,7 +25,8 @@ return  [
             'port' => 3306,
             'user' => 'root',
             'password' => 'root',
-            'dbName' => 'test',
+            'charset' => 'utf-8',
+            'dbName' => 'ziyue_db',
             'tblPrefix' => 'zy_',
         ],
         [
@@ -32,7 +34,8 @@ return  [
             'port' => 3306,
             'user' => 'root',
             'password' => 'root',
-            'dbName' => 'test',
+            'charset' => 'utf-8',
+            'dbName' => 'ziyue_db',
             'tblPrefix' => 'zy_',
         ]
     ]
