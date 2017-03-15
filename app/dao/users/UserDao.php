@@ -33,7 +33,7 @@ class UserDao extends Model
             ->orderBy(['a.id' => 'desc', 'create_time' => 'asc'])
             ->groupBy(['id'])
             ->limit(0, 20)
-            ->select('id,username');
+            ->selectAll('id,username');
     }
 
     public function findUserInfoById($id) {
