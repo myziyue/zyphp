@@ -15,7 +15,7 @@ class UserDao extends Model
 {
     public static function tableName()
     {
-        return '{{%user}}';
+        return '{{%admin}}';
     }
 
     public function rules()
@@ -26,13 +26,13 @@ class UserDao extends Model
         $data = static::model()
             ->from(static::tableName())
             ->where([
-                'id' => $id,
-                'username' => 'evan2884'
+                'id' => $id
             ])
-            ->orderBy(['a.id' => 'desc', 'create_time' => 'asc'])
+            ->orderBy(['id' => 'desc', 'created_at' => 'asc'])
             ->groupBy(['id'])
-            ->limit(0, 20)
-            ->select('id,username');
+//            ->limit(0, 20)
+            ->selectAll();
+        \Zy::p($data);
     }
 
     public function findUserInfoById($id) {
