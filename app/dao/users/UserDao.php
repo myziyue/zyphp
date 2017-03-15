@@ -13,7 +13,6 @@ use ziyue\db\Model;
 
 class UserDao extends Model
 {
-
     public static function tableName()
     {
         return '{{%user}}';
@@ -24,7 +23,16 @@ class UserDao extends Model
     }
 
     public function findUserInfo($id){
-        $data = self::model()->select('*');
+        $data = static::model()
+            ->from(static::tableName())
+            ->where([
+                'id' => $id,
+                'username' => 'evan2884'
+            ])
+            ->orderBy(['a.id' => 'desc', 'create_time' => 'asc'])
+            ->groupBy(['id'])
+            ->limit(0, 20)
+            ->select('id,username');
     }
 
     public function findUserInfoById($id) {

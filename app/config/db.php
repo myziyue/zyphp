@@ -15,7 +15,8 @@ return  [
         'port' => 3306,
         'user' => 'root',
         'password' => 'root',
-        'dbName' => 'test'
+        'dbName' => 'test',
+        'tblPrefix' => 'zy_',
     ],
     'slaves' => [
         [
@@ -23,14 +24,16 @@ return  [
             'port' => 3306,
             'user' => 'root',
             'password' => 'root',
-            'dbName' => 'test'
+            'dbName' => 'test',
+            'tblPrefix' => 'zy_',
         ],
         [
             'host' => 'localhost',
             'port' => 3306,
             'user' => 'root',
             'password' => 'root',
-            'dbName' => 'test'
+            'dbName' => 'test',
+            'tblPrefix' => 'zy_',
         ]
     ]
 ];
