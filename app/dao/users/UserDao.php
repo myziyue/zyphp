@@ -63,4 +63,12 @@ class UserDao extends Model
         $data = self::model()->query($sql, ['id' => $id]);
         return $data;
     }
+
+    public function editUserInfoById($id){
+        $data = static::model()
+            ->from(static::tableName())
+            ->where(['id' => $id])
+            ->update(['cate_id' => 2]);
+        return $data;
+    }
 }
