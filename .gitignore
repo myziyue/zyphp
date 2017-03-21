@@ -19,3 +19,5 @@ phpunit.phar
 vendor
 composer.lock
 app/runtimes/
+
+tests/_output/*
