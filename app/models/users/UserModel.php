@@ -17,4 +17,8 @@ class UserModel
     public function findUserInfo(){
         return DaoFactory::createDao('users', 'user')->findUserInfo(1);
     }
+
+    public function editUserInfo(){
+        return DaoFactory::createDao('users', 'user')->editUserInfoById(1);
+    }
 }
