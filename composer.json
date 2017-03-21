@@ -1,5 +1,6 @@
 {
     "require": {
-        "myziyue/framework": "dev-framework-v0.3"
+        "myziyue/framework": "dev-framework-v0.3",
+        "codeception/codeception": "^2.2"
     }
 }
