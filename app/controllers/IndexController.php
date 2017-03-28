@@ -9,6 +9,7 @@
  */
 namespace app\controllers;
 
+use ziyue\db\Model;
 use Zy;
 use app\models\ModelFactory;
 
@@ -18,6 +19,22 @@ class IndexController
     {
 //        ModelFactory::createModel('users', 'user')->findUserInfo();
         Zy::p(ModelFactory::createModel('users', 'user')->editUserInfo());
+        Zy::p(ModelFactory::createModel('users', 'user')->addUserInfo([
+            'cate_id' => 2,
+            'title' => 'test',
+            'sketch' => 'test',
+            'blog_thumb' => 'test',
+            'blog_img' => 'test',
+            'original_img' => 'test',
+            'author' => 1,
+            'content' => 'test',
+            'seo_title' => 'test',
+            'seo_keywords' => 'test',
+            'seo_desc' => 'test',
+            'status' => 10,
+            'created_at' => time(),
+            'updated_at' => time()
+        ]));
         Zy::p('Hello,world!');
     }
 
