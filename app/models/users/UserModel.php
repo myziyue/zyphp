@@ -21,4 +21,9 @@ class UserModel
     public function editUserInfo(){
         return DaoFactory::createDao('users', 'user')->editUserInfoById(1);
     }
+
+    public function addUserInfo($data)
+    {
+        return DaoFactory::createDao('users', 'user')->addUserInfo($data);
+    }
 }

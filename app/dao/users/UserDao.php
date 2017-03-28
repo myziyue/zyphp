@@ -68,7 +68,12 @@ class UserDao extends Model
         $data = static::model()
             ->from(static::tableName())
             ->where(['id' => $id])
-            ->update(['cate_id' => 2]);
+            ->update(['cate_id' => 1]);
+        return $data;
+    }
+
+    public function addUserInfo($data) {
+        $data = static::model()->insert($data);
         return $data;
     }
 }
