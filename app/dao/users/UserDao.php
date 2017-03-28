@@ -73,7 +73,12 @@ class UserDao extends Model
     }
 
     public function addUserInfo($data) {
-        $data = static::model()->insert($data);
+        $data = static::model()->from(static::tableName())->insert($data);
+        return $data;
+    }
+
+    public function deleteUserInfo($data) {
+        $data = static::model()->from(static::tableName())->where($data)->delete();
         return $data;
     }
 }

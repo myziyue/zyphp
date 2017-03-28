@@ -18,8 +18,8 @@ class IndexController
     public function actionIndex()
     {
 //        ModelFactory::createModel('users', 'user')->findUserInfo();
-        Zy::p(ModelFactory::createModel('users', 'user')->editUserInfo());
-        Zy::p(ModelFactory::createModel('users', 'user')->addUserInfo([
+//        Zy::p(ModelFactory::createModel('users', 'user')->editUserInfo());
+        $insertId = ModelFactory::createModel('users', 'user')->addUserInfo([
             'cate_id' => 2,
             'title' => 'test',
             'sketch' => 'test',
@@ -34,6 +34,10 @@ class IndexController
             'status' => 10,
             'created_at' => time(),
             'updated_at' => time()
+        ]);
+        Zy::p($insertId);
+        Zy::p(ModelFactory::createModel('users', 'user')->deleteUserInfo([
+            'id' => $insertId
         ]));
         Zy::p('Hello,world!');
     }

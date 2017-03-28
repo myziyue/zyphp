@@ -14,16 +14,30 @@ use \Zy;
 
 class UserModel
 {
+    private static $dao = null;
+
+    public function __construct()
+    {
+        if(self::$dao == null) {
+            self::$dao = DaoFactory::createDao('users', 'user');
+        }
+    }
+
     public function findUserInfo(){
-        return DaoFactory::createDao('users', 'user')->findUserInfo(1);
+        return self::$dao->findUserInfo(1);
     }
 
     public function editUserInfo(){
-        return DaoFactory::createDao('users', 'user')->editUserInfoById(1);
+        return self::$dao->editUserInfoById(1);
     }
 
     public function addUserInfo($data)
     {
-        return DaoFactory::createDao('users', 'user')->addUserInfo($data);
+        return self::$dao->addUserInfo($data);
+    }
+
+    public function deleteUserInfo($data)
+    {
+        return self::$dao->deleteUserInfo($data);
     }
 }
