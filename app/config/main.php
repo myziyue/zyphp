@@ -14,12 +14,12 @@ return [
     'defaultNameSpace' => 'app\\controllers',
     'charset' => 'UTF-8',
     'components' => [
-//        'logger' => [
-//            'class' => 'ziyue\log\Logger'
-//        ],
+        'logger' => [
+            'class' => 'ziyue\log\Connection',
+        ],
         'db' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
 //        'cache' => require (__DIR__ . DIRECTORY_SEPARATOR . 'db.php'),
     ],
-//    'catchAll' => ['class' => 'index/offline'],
-//    'catchAllAllowIp' => ['192.168.30.1', '127.0.0.1'],
+    'catchAll' => ['class' => 'index/offline'],
+    'catchAllAllowIp' => ['127.0.0.1'],
 ];
