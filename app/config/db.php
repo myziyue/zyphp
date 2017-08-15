@@ -16,7 +16,7 @@ return  [
         'user' => 'root',
         'password' => 'root',
         'charset' => 'utf8',
-        'dbName' => 'ziyue_db',
+        'dbName' => 'ziyue_db_adfs',
         'tblPrefix' => 'zy_',
     ],
     'slaves' => [
@@ -26,7 +26,7 @@ return  [
             'user' => 'root',
             'password' => 'root',
             'charset' => 'utf8',
-            'dbName' => 'ziyue_db',
+            'dbName' => 'ziyue_db_adfs',
             'tblPrefix' => 'zy_',
         ],
         [
@@ -35,7 +35,7 @@ return  [
             'user' => 'root',
             'password' => 'root',
             'charset' => 'utf8',
-            'dbName' => 'ziyue_db',
+            'dbName' => 'ziyue_db_adfs',
             'tblPrefix' => 'zy_',
         ]
     ]

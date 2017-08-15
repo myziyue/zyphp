@@ -36,9 +36,7 @@ class IndexController
             'updated_at' => time()
         ]);
         Zy::p($insertId);
-        Zy::p(ModelFactory::createModel('users', 'user')->deleteUserInfo([
-            'id' => $insertId
-        ]));
+        Zy::p(ModelFactory::createModel('users', 'user')->deleteUserInfo(['id' => $insertId]));
         Zy::p('Hello,world!');
     }
 
